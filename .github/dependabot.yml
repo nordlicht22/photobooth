@@ -1,9 +1,20 @@
 version: 2
 updates:
-  # Enable version updates for npm
-  - package-ecosystem: 'npm'
-    # Look for `package.json` and `lock` files in the `root` directory
-    directory: '/'
-    # Check the npm registry for updates every week
-    schedule:
-      interval: 'monthly'
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.13.8
+  - dependency-name: whatwg-fetch
+    versions:
+    - 3.6.2
+  - dependency-name: socket.io
+    versions:
+    - 3.1.2
+  - dependency-name: rpio
+    versions:
+    - 2.4.2
