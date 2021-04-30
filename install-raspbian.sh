@@ -305,7 +305,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     apt install -y unclutter
 
-    cat >> /etc/xdg/lxsession/LXDE-pi/autostart <<EOF
+    cat >> /etc/xdg/lxsession/LXDE/autostart <<EOF
 
 @xset s off
 @xset -dpms
@@ -367,8 +367,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     info "### Disabling automount for pi user"
 
-    mkdir -p /home/pi/.config/pcmanfm/LXDE-pi/
-    cat >> /home/pi/.config/pcmanfm/LXDE-pi/pcmanfm.conf <<EOF
+    mkdir -p /home/pi/.config/pcmanfm/LXDE/
+    cat >> /home/pi/.config/pcmanfm/LXDE/pcmanfm.conf <<EOF
 [volume]
 mount_on_startup=0
 mount_removable=0
